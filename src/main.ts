@@ -8,7 +8,6 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
 import { hmrBootstrap } from './hmr';
 
 if (environment.production) {
