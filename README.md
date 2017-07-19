@@ -2,22 +2,6 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
-## HMR
-
-Hot module reload is an optimization to the deployment process.
-
-Traditionally when you change something in the code base what will happen is:
-
-1. CLI server detects code change.
-2. The affected modules are recompiled.
-3. The project bundle files are sent to the browser.
-4. The browser refreshes the page to reload a bundle.
-
-With HMR the process differs in that steps 3 and 4 are done concurrently by the CLI with a simple but powerful side effect:
-
-3. The CLI server sends the parts of the bundle that were changed to the browser and updates without refreshing the page.
-4. **This step does not apply when using the CLI.**
-
 ---
 
 ## Using the `ng` commands
@@ -39,6 +23,31 @@ The way you would use the command(s):
 ```bash
 ./node_modules/.bin/ng generate c COMPONENT_NAME
 ```
+
+---
+
+## HMR
+
+Hot module reload is an optimization to the deployment process.
+
+Traditionally when you change something in the code base what will happen is:
+
+1. CLI server detects code change.
+2. The affected modules are recompiled.
+3. The project bundle files are sent to the browser.
+4. The browser refreshes the page to reload a bundle.
+
+With HMR the process differs in that steps 3 and 4 are done concurrently by the CLI with a simple but powerful side effect:
+
+3. The CLI server sends the parts of the bundle that were changed to the browser and updates without refreshing the page.
+4. **This step does not apply when using the CLI.**
+
+### How do I use HMR?
+
+There are two commands:
+
+- `npm run start` - This will actually run `npm run start.nohmr` so it will start the server with `HMR` disabled.
+- `npm run start.hmr` - This will start the project with `hmr` enabled.
 
 ---
 
